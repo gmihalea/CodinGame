@@ -1,0 +1,44 @@
+import java.util.*;
+import java.io.*;
+import java.math.*;
+
+class Solution {
+
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+        int N = in.nextInt(); // the number of temperatures to analyse
+        in.nextLine();
+        String TEMPS = in.nextLine(); // the N temperatures expressed as integers ranging from -273 to 5526
+        boolean onlyNegatives = true;
+        
+        if(N == 0)
+            System.out.println("0");
+        else
+            if(N == 1)
+                System.out.println(TEMPS);
+        else
+        {
+            String[] number = TEMPS.split("\\s+");
+
+            int min = -273;
+            int [] num = new int[N];
+            for(int i = 0; i < N; ++i){
+                num[i] = Integer.parseInt(number[i]);
+                if(num[i] > 0)
+                    onlyNegatives = false;
+            }
+            for (int j = 0; j < N; ++j) {
+                if (Math.abs(num[j]) < Math.abs(min)) {
+                    min = num[j];
+                }
+            }
+            
+            if (onlyNegatives) {
+                System.out.println(min);
+            }
+            else {
+                System.out.println(Math.abs(min));
+            }
+        }
+    }
+}
