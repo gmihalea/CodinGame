@@ -2,9 +2,6 @@ import java.util.*;
 import java.io.*;
 import java.math.*;
 
-/**
- * CodinGame planet is being attacked by slimy insectoid aliens.
- **/
 class Player {
 
     public static void main(String args[]) {
