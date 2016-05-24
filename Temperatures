@@ -8,7 +8,8 @@ class Solution {
         Scanner in = new Scanner(System.in);
         int N = in.nextInt(); // the number of temperatures to analyse
         in.nextLine();
-        String TEMPS = in.nextLine(); // the N temperatures expressed as integers ranging from -273 to 5526
+        String TEMPS = in.nextLine(); // the N temperatures expressed as 
+                                      // integers ranging from -273 to 5526
         boolean onlyNegatives = true;
         
         if(N == 0)
