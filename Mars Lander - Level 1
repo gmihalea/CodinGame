@@ -16,7 +16,9 @@ class Player {
         int endY = -1;
         for (int i = 0; i < N; i++) {
             int LAND_X = in.nextInt(); // X coordinate of a surface point. (0 to 6999)
-            int LAND_Y = in.nextInt(); // Y coordinate of a surface point. By linking all the points together in a sequential fashion, you form the surface of Mars.
+            int LAND_Y = in.nextInt(); // Y coordinate of a surface point. 
+                                       // By linking all the points together in a sequential 
+                                       // fashion, you form the surface of Mars.
  
             if(LAND_Y == prevLAND_Y && (LAND_X - prevLAND_X) >= 1000) { // 1000 gap
                 startX = prevLAND_X;
